@@ -1,0 +1,304 @@
+/* Bootstrap supplies containers, the grid, spacing and button sizes. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background: #f7f9fa;
+  transition: background-color 0.2s, color 0.2s;
+}
+main { flex: 1; }
+h1, h2, h3, .logo { color: #174b52; font-weight: bold; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.2rem; }
+a { color: #2f6f75; }
+img { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+.intro { color: #52666a; font-size: 1.2rem; }
+.section-heading { text-align: center; }
+
+/* Our button colours; Bootstrap keeps the basic button shape and sizes. */
+.btn-teal {
+  color: #fff;
+  background: #2f6f75;
+  border-color: #2f6f75;
+}
+.btn-teal:hover, .btn-teal:active {
+  color: #fff;
+  background: #174b52;
+  border-color: #174b52;
+}
+.btn-outline-teal {
+  color: #2f6f75;
+  background: transparent;
+  border-color: #2f6f75;
+}
+.btn-outline-teal:hover, .btn-outline-teal:active {
+  color: #fff;
+  background: #2f6f75;
+  border-color: #2f6f75;
+}
+a:focus-visible, button:focus-visible, .btn:focus-visible, .field-control:focus-visible {
+  outline: 3px solid #b76e2d;
+  outline-offset: 3px;
+}
+
+/* Shared header, navigation, clock and footer. */
+.site-header { background: #fff; border-bottom: 1px solid #d8e2e4; }
+.header-row, .site-nav, .header-actions, .footer-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header-row { flex-wrap: wrap; justify-content: space-between; }
+.logo { font-size: 1.4rem; text-decoration: none; }
+.site-nav { flex-wrap: wrap; gap: 4px; }
+.menu-link {
+  padding: 8px 10px;
+  color: #31575c;
+  text-decoration: none;
+}
+.menu-link:hover, .menu-link[aria-current="page"] {
+  color: #9c5226;
+  text-decoration: underline;
+}
+.header-actions { flex-wrap: wrap; gap: 8px; }
+.datetime-badge {
+  padding: 5px 10px;
+  border: 1px solid #c9dedf;
+  border-radius: 6px;
+  color: #174b52;
+  background: #f1f7f8;
+  font-size: 0.8rem;
+}
+.site-footer { color: #fff; background: #174b52; }
+.footer-content { justify-content: space-between; align-items: start; }
+.site-footer p { margin: 0; }
+
+/* Hero and reusable cards. */
+.hero, .about-panel { border-radius: 12px; background: #f1f7f8; }
+.hero .row { align-items: center; }
+.hero h1 { font-size: 3rem; }
+.hero-image {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.travel-card, .author-card, .rating-panel {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #d8e2e4;
+  border-radius: 10px;
+  background: #fff;
+}
+.travel-card { display: flex; flex-direction: column; }
+.card-image { width: 100%; height: 180px; object-fit: cover; }
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.card-content > .btn, .card-content > .card-actions { margin-top: auto; }
+.card-actions, .gallery-controls, .popup-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.author-card { max-width: 550px; margin: 0 auto; }
+.author-image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border: 2px solid #2f6f75;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feature-list { padding-left: 20px; margin: 0; }
+
+/* FAQ uses ordinary buttons and the hidden attribute. */
+.faq-item {
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid #d8e2e4;
+  border-radius: 8px;
+  background: #fff;
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 0;
+  color: #174b52;
+  background: #f1f7f8;
+  text-align: left;
+  font-weight: bold;
+}
+.faq-question:hover { background: #dcebed; }
+.faq-answer { padding: 16px 20px; }
+
+/* Gallery: all nine original photographs are still in the HTML. */
+.gallery { max-width: 900px; margin: 0 auto; }
+.gallery-slide { margin: 0; overflow: hidden; border-radius: 12px; }
+.gallery-slide img { width: 100%; height: 480px; object-fit: cover; }
+.gallery-caption { color: #fff; background: #174b52; }
+.gallery-caption h3 { color: #fff; }
+.gallery-caption p { margin: 0; }
+.gallery-controls { justify-content: center; }
+.gallery-dot {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 1px solid #2f6f75;
+  border-radius: 50%;
+  background: transparent;
+}
+.gallery-dot[aria-pressed="true"] { background: #2f6f75; }
+
+/* Tours and the comparison table. */
+.tour-meta {
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #174b52;
+  background: #eaf3f4;
+}
+.table-wrap { overflow-x: auto; border: 1px solid #d8e2e4; border-radius: 8px; }
+.route-table { width: 100%; min-width: 540px; background: #fff; }
+.route-table th, .route-table td {
+  padding: 16px;
+  border: 1px solid #d8e2e4;
+  vertical-align: middle;
+}
+.route-table thead { color: #fff; background: #2f6f75; }
+
+/* Form fields and validation. */
+.field label { display: block; margin-bottom: 6px; font-weight: bold; }
+.field-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #9eb5b8;
+  border-radius: 6px;
+  color: inherit;
+  background: #fff;
+}
+textarea { resize: vertical; }
+.field-error {
+  display: none;
+  margin: 6px 0 0;
+  color: #b42318;
+  font-size: 0.9rem;
+}
+.field.invalid .field-error { display: block; }
+.field.invalid .field-control { border-color: #b42318; }
+.form-step, .contact-preference {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.form-step > legend { font-size: 1rem; font-weight: bold; margin-bottom: 16px; }
+.contact-preference legend { font-size: 1rem; font-weight: bold; }
+.contact-preference label { margin-right: 16px; }
+.field .checkbox-label {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  font-weight: normal;
+}
+.checkbox-label input { margin-top: 5px; }
+.step-title { margin: 24px 0 16px; }
+.notice {
+  padding: 16px;
+  border: 1px solid #9ac9b4;
+  border-radius: 6px;
+  color: #164c37;
+  background: #eaf7f0;
+}
+.notice h3, .night .notice h3 { color: #164c37; }
+.contact-image { width: 100%; height: 200px; border-radius: 8px; object-fit: cover; }
+.project-details {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 8px 12px;
+}
+.project-details dd { margin: 0; }
+
+/* The native dialog supplies focus management and Escape handling. */
+.popup {
+  width: calc(100% - 32px);
+  max-width: 480px;
+  max-height: calc(100% - 32px);
+  padding: 0;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 12px;
+  color: inherit;
+  background: #fff;
+}
+.popup::backdrop { background: rgba(0, 0, 0, 0.5); }
+.popup-heading { flex-wrap: nowrap; justify-content: space-between; }
+.popup-heading h2 { margin: 0; font-size: 1.3rem; }
+.close-button {
+  border: 0;
+  padding: 0 6px;
+  color: inherit;
+  background: transparent;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* Selecting a star triggers the colour and transform transitions. */
+.stars { display: flex; gap: 8px; }
+.star {
+  padding: 2px 4px;
+  border: 0;
+  color: #64748b;
+  background: transparent;
+  font-size: 2.3rem;
+  line-height: 1.4;
+  transition: transform 0.2s, color 0.2s;
+}
+.star.selected { color: #a65b00; transform: scale(1.15); }
+.rating-result { margin: 12px 0 0; font-weight: bold; }
+
+/* Night theme changes our components; the Bootstrap layout stays the same. */
+body.night { color: #e4edef; background: #172a30; }
+.night h1, .night h2, .night h3, .night a, .night .intro { color: #b4e1e4; }
+.night .site-header, .night .travel-card, .night .author-card,
+.night .rating-panel, .night .faq-item, .night .route-table, .night .popup {
+  color: #e4edef;
+  border-color: #46636a;
+  background: #223b43;
+}
+.night .hero, .night .about-panel, .night .faq-question {
+  color: #e4edef;
+  background: #294851;
+}
+.night .field-control { color: #e4edef; background: #172a30; }
+.night .field-control::placeholder { color: #afc4ca; }
+.night .field-error { color: #ffb6ae; }
+.night .btn-teal, .night .btn-outline-teal:hover, .night .gallery-caption h3 { color: #fff; }
+.night .btn-outline-teal { color: #b4e1e4; border-color: #b4e1e4; }
+.night .star { color: #b5c6cb; }
+.night .star.selected { color: #ffc56a; }
+
+@media (max-width: 991px) {
+  .header-actions { width: 100%; }
+}
+@media (max-width: 575px) {
+  h1, .hero h1 { font-size: 2rem; }
+  .header-row { display: block; }
+  .site-nav { margin: 12px 0; }
+  .hero-image { height: 220px; }
+  .gallery-slide img { height: 260px; }
+  .footer-content { flex-direction: column; }
+  .project-details { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Places to visit and walking routes in Astana." />
+    <title>Home | Astana Travel</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header py-3">
+      <div class="container header-row">
+        <a class="logo" href="index.html">Astana Travel</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="menu-link" href="index.html" aria-current="page">Home</a>
+          <a class="menu-link" href="places.html">Places</a>
+          <a class="menu-link" href="prices.html">Tours</a>
+          <a class="menu-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <span class="datetime-badge" id="current-date-time">Loading date and time...</span>
+          <button class="btn btn-outline-teal btn-sm" id="theme-button" type="button" aria-pressed="false">Night theme</button>
+          <button class="btn btn-teal btn-sm" id="open-popup" type="button">Subscribe</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-4">
+      <section class="hero p-4 p-md-5 mb-5" id="welcome">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h1>Discover Astana</h1>
+            <p class="intro">Visit Baiterek, explore modern architecture, and take a walk through the city centre.</p>
+            <div class="card-actions">
+              <a class="btn btn-teal btn-lg px-4" href="places.html">Explore Places</a>
+              <a class="btn btn-outline-teal btn-lg px-4" href="prices.html">View Tours</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img class="hero-image" src="images/astana.jpeg" alt="A view of Astana skyline" />
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5" id="highlights">
+        <h2 class="mb-4">Popular Places</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="travel-card">
+              <img class="card-image" src="images/baiterek.jpeg" alt="Baiterek monument" />
+              <div class="card-content p-4">
+                <h3>Baiterek</h3>
+                <p>Start in the city centre with one of Astana’s most recognisable landmarks and observation decks.</p>
+                <a class="btn btn-teal" href="places.html#baiterek">Discover Baiterek</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="travel-card">
+              <img class="card-image" src="images/khan_shatyr.jpeg" alt="Khan Shatyr" />
+              <div class="card-content p-4">
+                <h3>Khan Shatyr</h3>
+                <p>Take a break, find something to eat and explore this unique transparent tent-style structure.</p>
+                <a class="btn btn-teal" href="places.html#khan-shatyr">Explore Khan Shatyr</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="travel-card">
+              <img class="card-image" src="images/national_museum.jpeg" alt="National Museum" />
+              <div class="card-content p-4">
+                <h3>National Museum</h3>
+                <p>Explore thousands of years of Kazakh history, archaeological treasures, and contemporary art.</p>
+                <a class="btn btn-teal" href="places.html#museum">Visit Museum</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="rating-panel p-4 mb-5" id="rating" aria-labelledby="rating-title">
+        <h2 id="rating-title">Rate Astana Travel</h2>
+        <p>Choose a star to rate your interest in visiting Astana.</p>
+        <div class="stars" role="group" aria-label="Rate from 1 to 5">
+          <button class="star" type="button" aria-label="1 star" aria-pressed="false">&#9733;</button>
+          <button class="star" type="button" aria-label="2 stars" aria-pressed="false">&#9733;</button>
+          <button class="star" type="button" aria-label="3 stars" aria-pressed="false">&#9733;</button>
+          <button class="star" type="button" aria-label="4 stars" aria-pressed="false">&#9733;</button>
+          <button class="star" type="button" aria-label="5 stars" aria-pressed="false">&#9733;</button>
+        </div>
+        <p class="rating-result" id="rating-result" role="status">No rating yet.</p>
+        <audio id="rating-sound" src="sounds/rating.wav" preload="auto"></audio>
+      </section>
+
+      <section class="mb-5" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>Click on any question below to reveal the answer.</p>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-1">
+            <span>How can I book a guided tour?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-1" hidden>Use our <a href="contact.html">Contact Form</a> to choose a route and check your details. This student project does not send bookings.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-2">
+            <span>What is the best time to visit the Baiterek observation tower?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-2" hidden>Sunset (around 6:30 PM to 8:00 PM) is the ideal time. You will experience panoramic views in daylight and see the city illuminated as night
+                            falls.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-3">
+            <span>Are discounts available for students and large groups?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-3" hidden>Yes! University students receive a 20% discount with a valid student ID card, and groups of 5 or more receive a special group rate.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-4">
+            <span>Is transfer transportation included in the tour packages?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-4" hidden>All 4-hour (Culture Day) and 6-hour (Full Astana) tour packages include air-conditioned shuttle transfers between city landmarks.</div>
+        </div>
+      </section>
+
+      <section class="section-heading mb-5" id="author">
+        <h2 class="mb-4">About the Author</h2>
+        <article class="author-card p-4">
+          <img class="author-image mb-3" src="images/askhat.jpeg" alt="Bilyalov Askhat" />
+          <h3>Bilyalov Askhat</h3>
+          <p>Frontend Development &middot; SE-2514</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4">
+      <div class="container footer-content">
+        <div>
+          <strong>Astana Travel</strong>
+          <p>Places and routes in Astana.</p>
+        </div>
+        <div>
+          <p>Bilyalov Askhat</p>
+          <p>SE-2514 &middot; 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The browser handles dialog focus and the Escape key. -->
+    <dialog class="popup" id="subscription-popup" aria-labelledby="popup-title">
+      <div class="popup-content p-4">
+        <div class="popup-heading mb-3">
+          <h2 id="popup-title">Subscribe to Astana Travel</h2>
+          <button class="close-button" id="close-popup" type="button" aria-label="Close subscription">&times;</button>
+        </div>
+        <p>Get tour ideas, seasonal guides and Astana event notifications. This practice form does not send emails.</p>
+        <form id="subscribe-form" novalidate>
+          <div class="field mb-3">
+            <label for="popup-email">Email address *</label>
+            <input class="field-control" id="popup-email" type="email" placeholder="name@example.com" autocomplete="email" aria-describedby="popup-email-error" required autofocus />
+            <p class="field-error" id="popup-email-error">Please enter a valid email address.</p>
+          </div>
+          <button class="btn btn-teal" type="submit">Subscribe Now</button>
+        </form>
+        <p class="notice mt-3" id="popup-result" role="status" hidden>Thank you! Your email passed validation. This demo does not send emails.</p>
+      </div>
+    </dialog>
+  </body>
+</html>

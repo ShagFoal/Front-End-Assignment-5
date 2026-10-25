@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Places to visit and walking routes in Astana." />
+    <title>Places | Astana Travel</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/places.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header py-3">
+      <div class="container header-row">
+        <a class="logo" href="index.html">Astana Travel</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="menu-link" href="index.html">Home</a>
+          <a class="menu-link" href="places.html" aria-current="page">Places</a>
+          <a class="menu-link" href="prices.html">Tours</a>
+          <a class="menu-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <span class="datetime-badge" id="current-date-time">Loading date and time...</span>
+          <button class="btn btn-outline-teal btn-sm" id="theme-button" type="button" aria-pressed="false">Night theme</button>
+          <button class="btn btn-teal btn-sm" id="open-popup" type="button">Subscribe</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-4">
+      <section class="mb-5">
+        <h1>Popular Places</h1>
+        <p class="intro">Modern landmarks, open spaces and a closer look at local culture.</p>
+      </section>
+
+      <section class="mb-5" id="landmarks">
+        <h2 class="mb-4">Key Landmarks</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" id="baiterek">
+            <article class="travel-card">
+              <img class="card-image" src="images/baiterek.jpeg" alt="Baiterek monument" />
+              <div class="card-content p-4">
+                <h3>Baiterek</h3>
+                <p>A good starting point for a walk through central Astana. Look up at its golden sphere and explore the boulevard.</p>
+                <ul class="feature-list">
+                  <li>Central location</li>
+                  <li>Panoramic observation floor</li>
+                  <li>Memorable photo stop</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" id="khan-shatyr">
+            <article class="travel-card">
+              <img class="card-image" src="images/khan_shatyr.jpeg" alt="Khan Shatyr" />
+              <div class="card-content p-4">
+                <h3>Khan Shatyr</h3>
+                <p>This tent-shaped building brings shopping, food and entertainment together into one massive climate-controlled venue.</p>
+                <ul class="feature-list">
+                  <li>Shopping and dining gallery</li>
+                  <li>Indoor beach resort</li>
+                  <li>Unique architectural feat</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4" id="museum">
+            <article class="travel-card">
+              <img class="card-image" src="images/national_museum.jpeg" alt="National Museum" />
+              <div class="card-content p-4">
+                <h3>National Museum</h3>
+                <p>Dedicated to preserving and displaying Kazakhstan&#x27;s rich cultural, historical, and ethnographical legacy.</p>
+                <ul class="feature-list">
+                  <li>Hall of Ancient and Medieval History</li>
+                  <li>Hall of Gold artefacts</li>
+                  <li>Modern Kazakhstan exhibition</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-5" id="gallery-carousel">
+        <div class="section-heading mb-4">
+          <h2>Astana in Nine Pictures</h2>
+          <p>Photo tour of central avenues, modern architecture, and scenic capital views.</p>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-slide">
+            <img src="images/astana.jpeg" alt="City skyline" />
+            <figcaption class="gallery-caption p-3">
+              <h3>City Skyline</h3>
+              <p>Panoramic view of the modern downtown area.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/baiterek.jpeg" alt="Baiterek monument" />
+            <figcaption class="gallery-caption p-3">
+              <h3>Baiterek Tower</h3>
+              <p>Monument embodying Kazakh folklore and statehood.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/khan_shatyr.jpeg" alt="Khan Shatyr" />
+            <figcaption class="gallery-caption p-3">
+              <h3>Khan Shatyr</h3>
+              <p>Architectural wonder designed by Norman Foster.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/national_museum.jpeg" alt="National Museum" />
+            <figcaption class="gallery-caption p-3">
+              <h3>National Museum</h3>
+              <p>Largest museum complex in Central Asia.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/contact.jpeg" alt="City sculpture" />
+            <figcaption class="gallery-caption p-3">
+              <h3>City Sculpture</h3>
+              <p>Contemporary public art in the parks.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/tour.jpeg" alt="City tour" />
+            <figcaption class="gallery-caption p-3">
+              <h3>City Promenade</h3>
+              <p>Walking routes along the central avenues.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/mosque.jpg" alt="Grand Mosque" />
+            <figcaption class="gallery-caption p-3">
+              <h3>Grand Mosque</h3>
+              <p>Stunning Islamic architecture in the capital.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/nur-astana.jpg" alt="Nur Astana Mosque" />
+            <figcaption class="gallery-caption p-3">
+              <h3>Nur Astana Mosque</h3>
+              <p>Historic spiritual centre with elegant domes.</p>
+            </figcaption>
+          </figure>
+          <figure class="gallery-slide" hidden>
+            <img src="images/mosque-interior.jpg" alt="Grand Mosque Interior" />
+            <figcaption class="gallery-caption p-3">
+              <h3>Grand Mosque Interior</h3>
+              <p>Exquisite interior ornaments and light fixtures.</p>
+            </figcaption>
+          </figure>
+          <div class="gallery-controls mt-3" role="group" aria-label="Choose a gallery photo">
+            <button class="gallery-dot" type="button" aria-label="Show photo 1" aria-pressed="true"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 2" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 3" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 4" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 5" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 6" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 7" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 8" aria-pressed="false"></button>
+            <button class="gallery-dot" type="button" aria-label="Show photo 9" aria-pressed="false"></button>
+          </div>
+          <div class="gallery-controls mt-3">
+            <button class="btn btn-outline-teal px-4" id="previous-slide" type="button">Previous Slide</button>
+            <span id="gallery-counter" role="status">Photo 1 of 9</span>
+            <button class="btn btn-outline-teal px-4" id="next-slide" type="button">Next Slide</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4">
+      <div class="container footer-content">
+        <div>
+          <strong>Astana Travel</strong>
+          <p>Places and routes in Astana.</p>
+        </div>
+        <div>
+          <p>Bilyalov Askhat</p>
+          <p>SE-2514 &middot; 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The browser handles dialog focus and the Escape key. -->
+    <dialog class="popup" id="subscription-popup" aria-labelledby="popup-title">
+      <div class="popup-content p-4">
+        <div class="popup-heading mb-3">
+          <h2 id="popup-title">Subscribe to Astana Travel</h2>
+          <button class="close-button" id="close-popup" type="button" aria-label="Close subscription">&times;</button>
+        </div>
+        <p>Get tour ideas, seasonal guides and Astana event notifications. This practice form does not send emails.</p>
+        <form id="subscribe-form" novalidate>
+          <div class="field mb-3">
+            <label for="popup-email">Email address *</label>
+            <input class="field-control" id="popup-email" type="email" placeholder="name@example.com" autocomplete="email" aria-describedby="popup-email-error" required autofocus />
+            <p class="field-error" id="popup-email-error">Please enter a valid email address.</p>
+          </div>
+          <button class="btn btn-teal" type="submit">Subscribe Now</button>
+        </form>
+        <p class="notice mt-3" id="popup-result" role="status" hidden>Thank you! Your email passed validation. This demo does not send emails.</p>
+      </div>
+    </dialog>
+  </body>
+</html>

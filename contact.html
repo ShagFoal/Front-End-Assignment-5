@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Places to visit and walking routes in Astana." />
+    <title>Contact | Astana Travel</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header py-3">
+      <div class="container header-row">
+        <a class="logo" href="index.html">Astana Travel</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="menu-link" href="index.html">Home</a>
+          <a class="menu-link" href="places.html">Places</a>
+          <a class="menu-link" href="prices.html">Tours</a>
+          <a class="menu-link" href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <span class="datetime-badge" id="current-date-time">Loading date and time...</span>
+          <button class="btn btn-outline-teal btn-sm" id="theme-button" type="button" aria-pressed="false">Night theme</button>
+          <button class="btn btn-teal btn-sm" id="open-popup" type="button">Subscribe</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-4">
+      <section class="mb-5">
+        <h1>Contact Us</h1>
+        <p class="intro">Choose a route and prepare your questions or booking enquiry.</p>
+      </section>
+
+      <div class="row g-4">
+        <section class="col-lg-7" id="enquiry">
+          <div class="travel-card p-4">
+            <h2>Enquiry Form</h2>
+            <p>Fields marked with an asterisk (*) are required. Use a sample password: no account is created and nothing is sent.</p>
+            <h3 class="step-title" id="step-title" aria-live="polite">Step 1 of 2: Your details</h3>
+            <form id="contact-form" novalidate>
+              <fieldset class="form-step" id="details-step">
+                <legend>Your details</legend>
+                <div class="field mb-3">
+                  <label for="name">Full Name *</label>
+                  <input class="field-control" id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" maxlength="80" aria-describedby="name-error" required />
+                  <p class="field-error" id="name-error">Name is required.</p>
+                </div>
+                <div class="field mb-3">
+                  <label for="email">Email address *</label>
+                  <input class="field-control" id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" aria-describedby="email-error" required />
+                  <p class="field-error" id="email-error">Please enter a valid email address.</p>
+                </div>
+                <div class="field mb-3">
+                  <label for="password">Password *</label>
+                  <input class="field-control" id="password" name="password" type="password" placeholder="Minimum 6 characters" autocomplete="new-password" minlength="6" aria-describedby="password-error" required />
+                  <p class="field-error" id="password-error">Enter at least 6 characters, not only spaces.</p>
+                </div>
+                <div class="field mb-4">
+                  <label for="confirmPassword">Confirm Password *</label>
+                  <input class="field-control" id="confirmPassword" name="confirmPassword" type="password" placeholder="Repeat your password" autocomplete="new-password" aria-describedby="confirm-error" required />
+                  <p class="field-error" id="confirm-error">Both passwords must match.</p>
+                </div>
+                <button class="btn btn-teal px-4" id="next-button" type="button">Next</button>
+              </fieldset>
+
+              <fieldset class="form-step" id="message-step" hidden>
+                <legend>Your enquiry</legend>
+                <div class="field mb-3">
+                  <label for="tour">Choose a Tour</label>
+                  <select class="field-control" id="tour" name="tour">
+                    <option>City Start (2 hours)</option>
+                    <option>Culture Day (4 hours)</option>
+                    <option>Full Astana (6 hours)</option>
+                  </select>
+                </div>
+                <fieldset class="contact-preference mb-3">
+                  <legend>Preferred Contact Method</legend>
+                  <label><input type="radio" name="contactPref" id="prefEmail" value="email" checked /> Email</label>
+                  <label><input type="radio" name="contactPref" id="prefPhone" value="phone" /> Phone</label>
+                </fieldset>
+                <div class="field mb-3">
+                  <label for="message">Message *</label>
+                  <textarea class="field-control" id="message" name="message" rows="4" placeholder="What would you like to ask or explore?" maxlength="1000" aria-describedby="message-error" required></textarea>
+                  <p class="field-error" id="message-error">Message is required.</p>
+                </div>
+                <div class="field mb-4">
+                  <label class="checkbox-label" for="consent">
+                    <input id="consent" name="consent" type="checkbox" aria-describedby="consent-error" required />
+                    I agree to receive tour route details via email.
+                  </label>
+                  <p class="field-error" id="consent-error">You must agree before submitting.</p>
+                </div>
+                <div class="card-actions">
+                  <button class="btn btn-outline-teal" id="back-button" type="button">Back</button>
+                  <button class="btn btn-teal px-4" id="submit-button" type="submit">Submit Enquiry</button>
+                </div>
+              </fieldset>
+            </form>
+
+            <div class="notice mt-4" id="form-result" role="status" hidden>
+              <h3>Details Checked</h3>
+              <p id="success-message"></p>
+              <button class="btn btn-outline-teal btn-sm" id="reset-button" type="button">Submit another enquiry</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="col-lg-5" id="about">
+          <div class="about-panel p-4">
+            <img class="contact-image mb-4" src="images/contact.jpeg" alt="Sculpture in Astana" />
+            <h2>About Astana Travel</h2>
+            <p>Here you can discover iconic city landmarks, compare guided tour routes and plan your unforgettable stay in Astana.</p>
+            <dl class="project-details mb-4">
+              <dt>Location</dt><dd>Astana, Kazakhstan</dd>
+              <dt>Project</dt><dd>Astana Travel &middot; Web Technologies 1</dd>
+              <dt>Author</dt><dd>Bilyalov Askhat &middot; SE-2514</dd>
+            </dl>
+            <a class="btn btn-outline-teal" href="prices.html">Explore Routes</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer py-4">
+      <div class="container footer-content">
+        <div>
+          <strong>Astana Travel</strong>
+          <p>Places and routes in Astana.</p>
+        </div>
+        <div>
+          <p>Bilyalov Askhat</p>
+          <p>SE-2514 &middot; 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The browser handles dialog focus and the Escape key. -->
+    <dialog class="popup" id="subscription-popup" aria-labelledby="popup-title">
+      <div class="popup-content p-4">
+        <div class="popup-heading mb-3">
+          <h2 id="popup-title">Subscribe to Astana Travel</h2>
+          <button class="close-button" id="close-popup" type="button" aria-label="Close subscription">&times;</button>
+        </div>
+        <p>Get tour ideas, seasonal guides and Astana event notifications. This practice form does not send emails.</p>
+        <form id="subscribe-form" novalidate>
+          <div class="field mb-3">
+            <label for="popup-email">Email address *</label>
+            <input class="field-control" id="popup-email" type="email" placeholder="name@example.com" autocomplete="email" aria-describedby="popup-email-error" required autofocus />
+            <p class="field-error" id="popup-email-error">Please enter a valid email address.</p>
+          </div>
+          <button class="btn btn-teal" type="submit">Subscribe Now</button>
+        </form>
+        <p class="notice mt-3" id="popup-result" role="status" hidden>Thank you! Your email passed validation. This demo does not send emails.</p>
+      </div>
+    </dialog>
+  </body>
+</html>

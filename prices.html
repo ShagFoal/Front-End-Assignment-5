@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Places to visit and walking routes in Astana." />
+    <title>Tours | Astana Travel</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <script src="js/tours.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header py-3">
+      <div class="container header-row">
+        <a class="logo" href="index.html">Astana Travel</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="menu-link" href="index.html">Home</a>
+          <a class="menu-link" href="places.html">Places</a>
+          <a class="menu-link" href="prices.html" aria-current="page">Tours</a>
+          <a class="menu-link" href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <span class="datetime-badge" id="current-date-time">Loading date and time...</span>
+          <button class="btn btn-outline-teal btn-sm" id="theme-button" type="button" aria-pressed="false">Night theme</button>
+          <button class="btn btn-teal btn-sm" id="open-popup" type="button">Subscribe</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-4">
+      <section class="mb-5">
+        <h1>City Tours</h1>
+        <p class="intro">Compare three routes by duration, stops and budget.</p>
+        <p>Sample offers for this student project. No real booking is made.</p>
+      </section>
+
+      <section class="mb-5" id="options">
+        <h2 class="mb-4">Tour Options</h2>
+        <!-- tours.js fills these cards from the tours array. -->
+        <div class="row g-4" id="tour-list"></div>
+        <noscript><p>Enable JavaScript to display the routes and comparison table.</p></noscript>
+      </section>
+
+      <section class="mb-5" id="comparison">
+        <h2 class="mb-4">Compare the Routes</h2>
+        <div class="table-wrap">
+          <table class="route-table">
+            <thead>
+              <tr>
+                <th scope="col">Tour</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Price</th>
+                <th scope="col">Main Stops</th>
+              </tr>
+            </thead>
+            <tbody id="tour-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-5" id="questions">
+        <h2 class="mb-4">Common Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-1">
+            <span>Which route is best for a first visit?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-1" hidden>City Start takes about two hours and comfortably covers Baiterek and the central boulevard.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-2">
+            <span>Can I explore these routes on foot?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-2" hidden>The central landmarks can easily be combined in a walk. For stops farther apart, plan time for public transport or taxi.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-3">
+            <span>What should I bring?</span><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" id="answer-3" hidden>Comfortable walking shoes, water, and an extra layer for cooler or windy weather are highly recommended.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4">
+      <div class="container footer-content">
+        <div>
+          <strong>Astana Travel</strong>
+          <p>Places and routes in Astana.</p>
+        </div>
+        <div>
+          <p>Bilyalov Askhat</p>
+          <p>SE-2514 &middot; 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The browser handles dialog focus and the Escape key. -->
+    <dialog class="popup" id="subscription-popup" aria-labelledby="popup-title">
+      <div class="popup-content p-4">
+        <div class="popup-heading mb-3">
+          <h2 id="popup-title">Subscribe to Astana Travel</h2>
+          <button class="close-button" id="close-popup" type="button" aria-label="Close subscription">&times;</button>
+        </div>
+        <p>Get tour ideas, seasonal guides and Astana event notifications. This practice form does not send emails.</p>
+        <form id="subscribe-form" novalidate>
+          <div class="field mb-3">
+            <label for="popup-email">Email address *</label>
+            <input class="field-control" id="popup-email" type="email" placeholder="name@example.com" autocomplete="email" aria-describedby="popup-email-error" required autofocus />
+            <p class="field-error" id="popup-email-error">Please enter a valid email address.</p>
+          </div>
+          <button class="btn btn-teal" type="submit">Subscribe Now</button>
+        </form>
+        <p class="notice mt-3" id="popup-result" role="status" hidden>Thank you! Your email passed validation. This demo does not send emails.</p>
+      </div>
+    </dialog>
+  </body>
+</html>
