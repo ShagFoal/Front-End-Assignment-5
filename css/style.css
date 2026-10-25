@@ -47,23 +47,35 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .field-control:focus-
 }
 
 /* Shared header, navigation, clock and footer. */
-.site-header { background: #fff; border-bottom: 1px solid #d8e2e4; }
+.site-header {
+  background: #fff;
+  border-top: 3px solid #2f6f75;
+  border-bottom: 1px solid #d8e2e4;
+  box-shadow: 0 3px 12px rgba(23, 75, 82, 0.08);
+}
 .header-row, .site-nav, .header-actions, .footer-content {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 .header-row { flex-wrap: wrap; justify-content: space-between; }
-.logo { font-size: 1.4rem; text-decoration: none; }
+.logo { font-size: 1.4rem; text-decoration: none; white-space: nowrap; }
 .site-nav { flex-wrap: wrap; gap: 4px; }
 .menu-link {
   padding: 8px 10px;
+  border-radius: 6px;
   color: #31575c;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s, background-color 0.2s;
 }
-.menu-link:hover, .menu-link[aria-current="page"] {
-  color: #9c5226;
-  text-decoration: underline;
+.menu-link:hover {
+  color: #174b52;
+  background: #eaf3f4;
+}
+.menu-link[aria-current="page"] {
+  color: #fff;
+  background: #2f6f75;
 }
 .header-actions { flex-wrap: wrap; gap: 8px; }
 .datetime-badge {
@@ -282,6 +294,8 @@ body.night { color: #e4edef; background: #172a30; }
   color: #e4edef;
   background: #294851;
 }
+.night .menu-link:hover { color: #e4edef; background: #294851; }
+.night .menu-link[aria-current="page"] { color: #172a30; background: #b4e1e4; }
 .night .field-control { color: #e4edef; background: #172a30; }
 .night .field-control::placeholder { color: #afc4ca; }
 .night .field-error { color: #ffb6ae; }
